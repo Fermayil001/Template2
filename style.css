@@ -24,11 +24,13 @@ nav {
     z-index: 10;
 }
 
-.container .logo {
-    color: #f8d40af5;
-    font-weight: 600;
-    font-size: 1.3rem;
+nav .container a img{
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    top: 0px;
 }
+
 
 .container ul {
     display: flex;
