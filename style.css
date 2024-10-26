@@ -603,6 +603,7 @@ h2 {
     width: 50px;
     height: 50px;
     float: right;
+    cursor: pointer;
 }
 
 .modal-content .modal-h2 {
