@@ -31,6 +31,43 @@ const portfolioItems = [
     }
 ]
 
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY !== 0) {
+        const nav = document.querySelector("nav");
+        Object.assign(nav.style, {
+            backgroundColor: "#212529",
+            transition: ".5s",
+            height: "70px",
+        })
+        
+        const navLogo = document.querySelector(".nav-logo");
+
+        Object.assign(navLogo.style, {
+            with: "50px",
+            height: "35px",
+            transition: ".5s"
+        })
+        
+    }else{
+        const nav = document.querySelector("nav");
+
+        Object.assign(nav.style, {
+            backgroundColor: "initial",
+            transition: "0.5s",
+            height: "90px",
+        })
+
+        const navLogo = document.querySelector(".nav-logo");
+
+        Object.assign(navLogo.style, {
+            with: "50px",
+            height: "40px"
+        })
+
+    }
+})
+
 const portfolio = document.querySelector(".portfolio");
 
 
@@ -87,13 +124,13 @@ imgbox.forEach((element, index) => {
         </div>
         `
 
-        const close =()=>{
+        const close = () => {
             modal.classList.remove("show");
         }
 
         const modalClose = modal.querySelectorAll(".close");
-        modalClose.forEach(element=>{
-            element.addEventListener('click', ()=> close())
-        })        
+        modalClose.forEach(element => {
+            element.addEventListener('click', () => close())
+        })
     })
 });
